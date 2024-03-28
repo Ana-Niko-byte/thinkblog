@@ -8,4 +8,4 @@ from django.http import HttpResponse
 #     else:
 #         return response
 def my_blog(request):
-    return HttpResponse("Hello, Blog!")
+    return HttpResponse("Hello, Blog! This is working right?")
