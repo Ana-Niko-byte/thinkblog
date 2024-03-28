@@ -19,6 +19,6 @@ from django.urls import path
 from blog import views as main_views
 
 urlpatterns = [
-    path('', main_views.my_blog, name='main'),
+    path('blog/', main_views.my_blog, name='main'),
     path('admin/', admin.site.urls),
 ]
