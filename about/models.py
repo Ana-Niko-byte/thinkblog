@@ -2,7 +2,7 @@ from django.db import models
 
 # step 1 after creating the model
 # Create your models here.
-class creator(models.Model):
+class Creator(models.Model):
     title=models.CharField(max_length=200)
     content=models.TextField()
     updated_on=models.DateTimeField(auto_now=True)
