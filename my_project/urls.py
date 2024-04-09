@@ -17,11 +17,11 @@ Including another URLconf
 # the butt of the url, all URLs defined in apps will be accessed by adding this section to the base URL.
 from django.contrib import admin
 from django.urls import path, include
-from about.views import hello_view
+from about.views import about_page
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('summernote/', include('django_summernote.urls')),
-    path('hello/', hello_view, name='about-author'),
+    path('hello/', about_page, name='about'),
     path('', include('blog.urls'), name='blog-urls'),
 ]
