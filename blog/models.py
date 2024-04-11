@@ -28,6 +28,7 @@ class Post(models.Model):
 class Comment(models.Model):
     post = models.ForeignKey(
         Post, on_delete=models.CASCADE, 
+        # name used in views on instance retrieval
         related_name = "comments"
         )
     author = models.ForeignKey(
