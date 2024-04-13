@@ -6,12 +6,12 @@
 <div class="container mt-5">
     <div class="row">
         <div class="col-12 col-md-4 text-center">
-            (% if "placeholder in creator.image.url" %)
-            <img src="{% static 'images/nobody.jpg' %}" width="75%" alt="placeholder image">
-            {% else %}
-            <img src="{{ about.featured_image.url }}" alt="{{ about.title }}">
-            {% endif %}
-        </div>
+            {% if "placeholder" in creator.image.url %}
+    <img src="{% static 'images/nobody.jpg' %}" width="75%" alt="placeholder image">
+{% else %}
+    <img src="{{ about.featured_image.url }}" alt="{{ about.title }}">
+{% endif %}
+</div>
         <div class="col-12 col-md-8">
             <h2>{{ about.title }}</h2>
             {{ about.content | safe }}
